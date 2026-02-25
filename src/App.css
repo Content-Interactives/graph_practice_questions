@@ -1,0 +1,239 @@
+/* ── Page ── */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: #f0f2f5;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1a1a2e;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 680px;
+}
+
+/* ── Card ── */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e0e3e8;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Topic Prompt Screen ── */
+.topic-prompt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.topic-heading {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a2e;
+}
+
+.topic-subtext {
+  margin: 0 0 20px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.topic-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.topic-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border: 1px solid #d0d4db;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  box-sizing: border-box;
+}
+
+.topic-input:focus {
+  border-color: #1967d2;
+  box-shadow: 0 0 0 3px rgba(25, 103, 210, 0.12);
+}
+
+.topic-input::placeholder {
+  color: #9ca3af;
+}
+
+.topic-input:disabled {
+  background: #f7f8fa;
+  color: #9ca3af;
+}
+
+.topic-btn {
+  align-self: stretch;
+}
+
+.topic-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ── Prompt ── */
+.prompt-text {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: center;
+  color: #1a1a2e;
+}
+
+/* ── Graph ── */
+.applet-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e0e3e8;
+}
+
+/* ── Toolbar ── */
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 8px;
+  border: 1px solid #d0d4db;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-submit {
+  flex: 1;
+  background: #1967d2;
+  color: #fff;
+  border-color: #1967d2;
+  box-shadow: 0 1px 4px rgba(25, 103, 210, 0.25);
+}
+
+.btn-submit:hover {
+  background: #1558b0;
+  border-color: #1558b0;
+  box-shadow: 0 2px 8px rgba(25, 103, 210, 0.35);
+}
+
+.btn-new {
+  flex: 1;
+  background: #f7f8fa;
+  color: #374151;
+  border-color: #d0d4db;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.btn-new:hover {
+  background: #eceef1;
+  border-color: #b5b9c2;
+}
+
+.btn-topic {
+  flex: 1;
+  background: #f7f8fa;
+  color: #374151;
+  border-color: #d0d4db;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.btn-topic:hover {
+  background: #eceef1;
+  border-color: #b5b9c2;
+}
+
+/* ── Feedback ── */
+.feedback-card {
+  width: 100%;
+  border-radius: 10px;
+  padding: 14px 18px;
+  animation: fadeSlideIn 0.25s ease-out;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.feedback-correct {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+}
+
+.feedback-incorrect {
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+}
+
+.feedback-text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.correct-text {
+  color: #065f46;
+}
+
+.feedback-heading {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #92400e;
+}
+
+.feedback-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.feedback-list li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #78350f;
+}
